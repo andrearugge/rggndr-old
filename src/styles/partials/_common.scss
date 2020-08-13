@@ -1,0 +1,180 @@
+html,
+body {
+  background: $white;
+  overflow-x: hidden;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  color: $primary;
+  text-decoration: none;
+
+  &:hover {
+    color: darken($primary, 4%);
+  }
+
+  img {
+    cursor: pointer;
+  }
+}
+
+.nav-logo {
+  margin: 0 auto;
+
+  @include desktop {
+    width: 6vw;
+  }
+  @include tablet {
+    width: 10vw;
+  }
+  @include mobile {
+    width: 100%;
+  }
+  height: 100%;
+  a {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+/* ==========
+COLORS
+========== */
+@each $color, $value in $colors-map {
+  .col-#{$color} {
+    color: $value;
+
+    @each $item, $val in $texts-map {
+      #{$item} {
+        color: $value;
+      }
+    }
+  }
+}
+
+/* ==========
+SECTIONS
+========== */
+.section-container {
+  padding-left: $container-padding;
+  padding-right: $container-padding;
+}
+
+.section {
+  @include mobile {
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+  }
+
+  @include tablet {
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+  }
+
+  @include desktop {
+    padding-top: 12vh;
+    padding-bottom: 12vh;
+  }
+}
+
+.section-spacing-t {
+  @include mobile {
+    padding-top: 10vh;
+  }
+
+  @include tablet {
+    padding-top: 10vh;
+  }
+
+  @include desktop {
+    padding-top: 12vh;
+  }
+}
+
+.section-spacing-b {
+  @include mobile {
+    padding-bottom: 10vh;
+  }
+
+  @include tablet {
+    padding-bottom: 10vh;
+  }
+
+  @include desktop {
+    padding-bottom: 12vh;
+  }
+}
+
+.section {
+  &.bg-blue {
+    background: $primary-soft;
+  }
+}
+
+.separator {
+  width: 100%;
+  height: 1px;
+  background: $black;
+  @extend .c-mb-4;
+}
+
+/* ==========
+CONTAINERS
+========== */
+.container-fluid {
+  &.fw {
+    padding: 0;
+  }
+}
+
+.container {
+  @include mobile {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+/* ==========
+FOOTER
+========== */
+.footer {
+  @extend .c-pb-5;
+  @include mobile {
+    padding-top: 10vh;
+  }
+
+  @include tablet {
+    padding-top: 10vh;
+  }
+
+  @include desktop {
+    padding-top: 12vh;
+  }
+
+  .logo-footer-container {
+    @extend .d-flex;
+    width: 100%;
+    justify-content: center;
+    @extend .c-mt-4;
+  }
+
+  .logo-footer {
+    @include desktop {
+      width: 6vw;
+    }
+    @include tablet {
+      width: 10vw;
+    }
+    @include mobile {
+      width: 100%;
+    }
+    height: 100%;
+  }
+}
+
+.w-100 {
+  width: 100%;
+}

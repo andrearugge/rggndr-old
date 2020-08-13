@@ -1,0 +1,20 @@
+@include font-weight;
+@include font-size;
+@include selection;
+
+.smooth-text {
+  color: $black-smooth;
+}
+
+.min-text {
+  font-size: 0.88rem;
+}
+/*
+@font-face {
+  font-family: "Neue Montreal";
+  src: url("/fonts/NeueMontreal-Regular.woff2") format("woff2"),
+    url("/fonts/NeueMontreal-Regular.woff") format("woff"),
+    url("/fonts/NeueMontreal-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}*/

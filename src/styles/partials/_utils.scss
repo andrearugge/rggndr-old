@@ -1,0 +1,347 @@
+.p-rel {
+  position: relative;
+}
+
+.pos-absolute {
+  position: absolute;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.ov-hidden {
+  overflow: hidden;
+}
+
+.ov-x-hidden {
+  overflow: hidden;
+}
+
+.unselectable {
+  -webkit-touch-callout: none;
+  user-select: none;
+}
+
+.unscrollable {
+  overflow: hidden;
+}
+
+.clickable {
+  cursor: pointer !important;
+}
+
+.disable {
+  pointer-events: none !important;
+  opacity: 0.5 !important;
+}
+
+/*
+====
+UTIL: Full width sections
+====
+*/
+.full-width {
+  width: 100vw !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/*
+====
+COMPONENTS: Background
+====
+*/
+.bg-grey {
+  background: $grey-1;
+}
+
+.bg-green {
+  background: $primary-soft;
+}
+
+.bg-primary {
+  background: $primary !important;
+}
+
+/*
+====
+COMPONENTS: Titles
+====
+*/
+@include mobile {
+  @each $title, $value in $title-sizes {
+    .title-#{$title},
+    h#{$title} {
+      font-size: $value * map-get($responsive-typo-multiplier-map, "mobile");
+      margin-bottom: map-get($title-spacing, $title) *
+        map-get($responsive-typo-spacing-multiplier-map, "mobile");
+      font-weight: bold;
+      line-height: 1.2;
+    }
+  }
+}
+
+@include tablet {
+  @each $title, $value in $title-sizes {
+    .title-#{$title} {
+      font-size: $value * map-get($responsive-typo-multiplier-map, "tablet");
+      margin-bottom: map-get($title-spacing, $title) *
+        map-get($responsive-typo-spacing-multiplier-map, "tablet");
+      font-weight: bold;
+      line-height: 1.2;
+    }
+  }
+}
+
+@include desktop {
+  @each $title, $value in $title-sizes {
+    .title-#{$title} {
+      font-size: $value * map-get($responsive-typo-multiplier-map, "desktop");
+      margin-bottom: map-get($title-spacing, $title) *
+        map-get($responsive-typo-spacing-multiplier-map, "desktop");
+      font-weight: bold;
+      line-height: 1.2;
+    }
+  }
+}
+
+/*
+====
+COMPONENTS: Paragraph Font sizes
+====
+*/
+@include mobile {
+  @each $title, $value in $font-size-map {
+    .f-size-#{$title} {
+      font-size: $value * map-get($responsive-font-multiplier-map, "mobile");
+    }
+  }
+}
+
+@include tablet {
+  @each $title, $value in $font-size-map {
+    .f-size-#{$title} {
+      font-size: $value * map-get($responsive-font-multiplier-map, "tablet");
+    }
+  }
+}
+
+@include desktop {
+  @each $title, $value in $font-size-map {
+    .f-size-#{$title} {
+      font-size: $value * map-get($responsive-font-multiplier-map, "desktop");
+    }
+  }
+}
+
+// MIXIN: Placeholder
+@mixin input-placeholder {
+  &.placeholder {
+    @content;
+  }
+
+  &:-moz-placeholder {
+    @content;
+  }
+
+  &::-moz-placeholder {
+    @content;
+  }
+
+  &:-ms-input-placeholder {
+    @content;
+  }
+
+  &::-webkit-input-placeholder {
+    @content;
+  }
+}
+
+// MIXIN: Font weight
+@mixin font-weight {
+  @each $name, $size in $weights-map {
+    .f-weight-#{$name} {
+      font-weight: $size;
+    }
+  }
+}
+
+// MIXIN: Font size
+@mixin font-size {
+  @each $name, $size in $font-size-map {
+    .f-size-#{$name} {
+      font-size: $size;
+    }
+  }
+}
+
+// MIXIN: Calc
+$prefixes: -webkit-, -moz-, -o-;
+
+@mixin calc($property, $calc) {
+  @each $prefix in $prefixes {
+    #{$property}: $prefix + calc(#{$calc});
+  }
+
+  #{$property}: calc(#{$calc});
+}
+
+// MIXIN: Hover
+@mixin hover {
+  &:hover {
+    @content;
+  }
+}
+
+// MIXIN: Text with stroke
+@mixin text-stroke($fill, $stroke-color, $stroke-width) {
+  -moz-text-fill-color: $fill;
+  -webkit-text-fill-color: $fill;
+  -moz-text-stroke-color: $stroke-color;
+  -webkit-text-stroke-color: $stroke-color;
+  -moz-text-stroke-width: $stroke-width;
+  -webkit-text-stroke-width: $stroke-width;
+}
+
+// MIXIN: Selection pseudo class
+@mixin selection {
+  @each $name, $var in $elements-map {
+    #{$name}::selection {
+      color: $white;
+      background: $black;
+    }
+  }
+}
+
+// MIXIN: Dark background
+@mixin dark-theme {
+  .dark-section {
+    @each $name, $var in $texts-map {
+      #{$name} {
+        color: $white;
+      }
+    }
+
+    a {
+      color: $white;
+    }
+  }
+}
+
+// FUNCTION: Color contrast
+@function color-yiq($color) {
+  $r: red($color);
+  $g: green($color);
+  $b: blue($color);
+
+  $yiq: (($r * 299) + ($g * 587) + ($b * 114)) / 1000;
+
+  @if ($yiq >=$yiq-contrasted-threshold) {
+    @return $yiq-text-dark;
+  } @else {
+    @return $yiq-text-light;
+  }
+}
+
+// FUNCTION: Spacing
+// Margin and Padding
+@each $prop, $abbrev in (margin: m, padding: p) {
+  @each $size, $length in $space-map {
+    .c-#{$abbrev}-#{$size} {
+      @include mobile {
+        #{$prop}: $length * map-get($responsive-space-multiplier-map, mobile);
+      }
+
+      @include tablet {
+        #{$prop}: $length * map-get($responsive-space-multiplier-map, tablet);
+      }
+
+      @include desktop {
+        #{$prop}: $length * map-get($responsive-space-multiplier-map, desktop);
+      }
+    }
+
+    .c-#{$abbrev}t-#{$size},
+    .c-#{$abbrev}y-#{$size} {
+      @include mobile {
+        #{$prop}-top: $length *
+          map-get($responsive-space-multiplier-map, mobile);
+      }
+
+      @include tablet {
+        #{$prop}-top: $length *
+          map-get($responsive-space-multiplier-map, tablet);
+      }
+
+      @include desktop {
+        #{$prop}-top: $length *
+          map-get($responsive-space-multiplier-map, desktop);
+      }
+    }
+
+    .c-#{$abbrev}r-#{$size},
+    .c-#{$abbrev}x-#{$size} {
+      @include mobile {
+        #{$prop}-right: $length *
+          map-get($responsive-space-multiplier-map, mobile);
+      }
+
+      @include tablet {
+        #{$prop}-right: $length *
+          map-get($responsive-space-multiplier-map, tablet);
+      }
+
+      @include desktop {
+        #{$prop}-right: $length *
+          map-get($responsive-space-multiplier-map, desktop);
+      }
+    }
+
+    .c-#{$abbrev}b-#{$size},
+    .c-#{$abbrev}y-#{$size} {
+      @include mobile {
+        #{$prop}-bottom: $length *
+          map-get($responsive-space-multiplier-map, mobile);
+      }
+
+      @include tablet {
+        #{$prop}-bottom: $length *
+          map-get($responsive-space-multiplier-map, tablet);
+      }
+
+      @include desktop {
+        #{$prop}-bottom: $length *
+          map-get($responsive-space-multiplier-map, desktop);
+      }
+    }
+
+    .c-#{$abbrev}l-#{$size},
+    .c-#{$abbrev}x-#{$size} {
+      @include mobile {
+        #{$prop}-left: $length *
+          map-get($responsive-space-multiplier-map, mobile);
+      }
+
+      @include tablet {
+        #{$prop}-left: $length *
+          map-get($responsive-space-multiplier-map, tablet);
+      }
+
+      @include desktop {
+        #{$prop}-left: $length *
+          map-get($responsive-space-multiplier-map, desktop);
+      }
+    }
+  }
+}

@@ -1,0 +1,196 @@
+/* Variables here - You can override variables too */
+$black: #03050e;
+$black-smooth: rgba($black, 0.5);
+$white: #ffffff;
+
+$background: #efede8;
+$primary: #926202;
+
+$primary-soft: #e4e8f9;
+$secondary: #ee6c67;
+
+$warning: #ffc107;
+$error: #dc3545;
+
+$grey-1: #f7f7f7;
+$grey-2: #f1f2f3;
+$grey-3: #eeeeef;
+$grey-4: #c8c8c9;
+
+$colors-map: (
+  black: $black,
+  white: $white,
+  primary: $primary,
+  secondary: $secondary,
+  warning: $warning,
+  error: $error,
+);
+
+// The yiq lightness value that determines when the lightness of color changes from "dark" to "light". Acceptable values are between 0 and 255.
+$yiq-contrasted-threshold: 150;
+// Light and dark text colors for YIQ color contrast function.
+$yiq-text-dark: $black;
+$yiq-text-light: $white;
+
+// Buttons
+$button-colors: (
+  primary: $primary,
+  secondary: $secondary,
+  warning: $warning,
+  error: $error,
+  info: $grey-2,
+);
+
+// Radius
+$radius-el: 6px;
+$radius-cta: 12px;
+$radius-image: 16px;
+
+// Input
+$input-placeholder-color: $grey-4;
+
+// Main + Sections
+$container-padding: 6%;
+$page-padding-top: 3rem;
+
+/* Utility variables */
+$safari-ios-toolbar: 34;
+
+// Breakpoints
+$breakpoints-map: (
+  mobile: 576px,
+  tablet: 991px,
+  desktop: 992px,
+  desktop-xl: 1280px,
+);
+
+// Font size
+$font-size-base: 1rem;
+$font-size-map: (
+  1: $font-size-base * 0.75,
+  // 12px
+    2: $font-size-base * 0.875,
+  // 14px
+    3: $font-size-base,
+  // 16px
+    4: $font-size-base * 1.125,
+  // 18px
+    5: $font-size-base * 1.25,
+  // 20px
+    6: $font-size-base * 1.5,
+  // 24px
+);
+
+$responsive-font-multiplier-map: (
+  mobile: 0.875,
+  tablet: 0.875,
+  desktop: 1,
+  large-desktop: 1,
+);
+
+// Font weights
+$weights-map: (
+  light: 300,
+  normal: 400,
+  bold: 600,
+);
+
+// Spacing
+$space: 1rem;
+$space-map: (
+  0: $space * 0,
+  1: $space * 0.5,
+  // 8px
+    2: $space * 0.75,
+  // 12px
+    3: $space,
+  // 16px
+    4: $space * 1.5,
+  // 24px
+    5: $space * 3,
+  // 48px
+    6: $space * 5,
+  // 80px
+    7: $space * 7.5,
+  // 120px
+    8: $space * 8.75,
+  // 140px
+    9: $space * 10,
+  // 160px
+);
+
+$responsive-space-multiplier-map: (
+  mobile: 0.75,
+  tablet: 0.875,
+  desktop: 1,
+  desktop-xl: 1,
+);
+
+// Typo
+$title-sizes: (
+  1: $font-size-base * 3.5,
+  2: $font-size-base * 2,
+  3: $font-size-base * 1.5,
+  4: $font-size-base * 1.25,
+);
+
+$title-spacing: (
+  1: $font-size-base * 1.65,
+  2: $font-size-base * 1.5,
+  3: $font-size-base * 1.25,
+  4: $font-size-base * 0.75,
+);
+
+$responsive-typo-multiplier-map: (
+  mobile: 0.55,
+  tablet: 0.55,
+  desktop: 1,
+  large-desktop: 1,
+);
+
+$responsive-typo-spacing-multiplier-map: (
+  mobile: 0.75,
+  tablet: 0.75,
+  desktop: 1,
+  large-desktop: 1,
+);
+
+// Elements map
+$elements-map: (
+  h1: h1,
+  h2: h2,
+  h3: h3,
+  h4: h4,
+  h5: h5,
+  h6: h6,
+  p: p,
+  span: span,
+  a: a,
+  b: b,
+  i: i,
+  div: div,
+  ul: ul,
+  li: li,
+  blockquote: blockquote,
+);
+
+// texts map
+$texts-map: (
+  p: p,
+  span: span,
+  a: a,
+  b: b,
+  i: i,
+  ul: ul,
+  li: li,
+  blockquote: blockquote,
+);
+
+$titles-map: (
+  h1: h1,
+  h2: h2,
+  h3: h3,
+  h4: h4,
+  h5: h5,
+  h6: h6,
+);
