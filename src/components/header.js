@@ -1,18 +1,13 @@
 import { Link } from "gatsby"
-import PropTypes from "prop-types"
 import React from "react"
 
-const Header = ({ siteTitle }) => (
+const Header = () => (
   <div>
+    <div className="pre-header"></div>
+    <div className="header">
+      <Link to="/">Home</Link>
+    </div>
   </div>
 )
-
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-  siteTitle: `Inserire un titolo`,
-}
 
 export default Header

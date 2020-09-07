@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `Inserire un titolo`,
-    description: `...ci penso io`,
+    title: `Andrea Ruggeri - Digital Product Designer`,
+    description: `Andrea Ruggeri - Digital Product Designer`,
     author: `Andrea Ruggeri <andrea@beconcept.studio> | Alessio Bortolotti <alessio@beconcept.studio>`,
   },
   plugins: [
@@ -34,12 +34,6 @@ module.exports = {
         cookieDomain: "",
       },
     },
-    // {
-    //   resolve: 'gatsby-plugin-iubenda-cookie-footer',
-    //   options: {
-    //     iubendaOptions: { "perPurposeConsent": true, "whitelabel": false, "lang": "it", "siteId": 1887281, "cookiePolicyId": 27650681, "banner": { "acceptButtonDisplay": true, "customizeButtonDisplay": true, "acceptButtonColor": "#4059d1", "acceptButtonCaptionColor": "white", "customizeButtonColor": "#DADADA", "customizeButtonCaptionColor": "#4D4D4D", "rejectButtonColor": "#0073CE", "rejectButtonCaptionColor": "white", "position": "float-bottom-center", "textColor": "black", "backgroundColor": "white" } },
-    //   }
-    // },
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -52,19 +46,6 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-sharp`,
-    `gatsby-plugin-smoothscroll`,
-    {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
-        start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
-        display: `minimal-ui`,
-        icon: `src/images/favicon.png`, // This path is relative to the root of the site.
-      },
-    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
