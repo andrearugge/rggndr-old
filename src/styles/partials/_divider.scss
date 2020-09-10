@@ -1,0 +1,9 @@
+.divider{
+  width: 100vw;
+  height: 1px;
+  opacity: .4;
+  
+  &.divider-white{
+    background: $white;
+  }
+}

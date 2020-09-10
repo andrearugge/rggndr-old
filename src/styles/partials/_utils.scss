@@ -44,6 +44,10 @@
   opacity: 0.5 !important;
 }
 
+.smooth {
+  opacity: $smooth;
+}
+
 /*
 ====
 UTIL: Full width sections
@@ -86,8 +90,8 @@ COMPONENTS: Titles
       font-size: $value * map-get($responsive-typo-multiplier-map, "mobile");
       margin-bottom: map-get($title-spacing, $title) *
         map-get($responsive-typo-spacing-multiplier-map, "mobile");
-      font-weight: bold;
       line-height: 1.2;
+      font-weight: normal;
     }
   }
 }
@@ -98,8 +102,8 @@ COMPONENTS: Titles
       font-size: $value * map-get($responsive-typo-multiplier-map, "tablet");
       margin-bottom: map-get($title-spacing, $title) *
         map-get($responsive-typo-spacing-multiplier-map, "tablet");
-      font-weight: bold;
       line-height: 1.2;
+      font-weight: normal;
     }
   }
 }
@@ -110,8 +114,8 @@ COMPONENTS: Titles
       font-size: $value * map-get($responsive-typo-multiplier-map, "desktop");
       margin-bottom: map-get($title-spacing, $title) *
         map-get($responsive-typo-spacing-multiplier-map, "desktop");
-      font-weight: bold;
       line-height: 1.2;
+      font-weight: normal;
     }
   }
 }

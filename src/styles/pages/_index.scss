@@ -1,0 +1,45 @@
+.s-hero {
+  @extend .d-flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding-bottom: $page-padding-top;
+
+  .menu {
+    flex: 1;
+    @extend .d-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .menu-items {
+      padding: 0;
+      list-style: none;
+      margin: 0;
+      li {
+        display: inline-block;
+        a {
+          @extend .s-text;
+          @extend .c-mx-1;
+        }
+      }
+    }
+
+    .barcode {
+      @extend .c-mt-2;
+    }
+  }
+
+  .intro {
+    font-size: map-get($title-sizes, 3);
+    line-height: 1.3;
+    span {
+      @extend .s-text;
+      opacity: $smooth;
+      margin-left: 27vw;
+      margin-right: 2rem;
+      top: -16px;
+      position: relative;
+      text-align: justify;
+    }
+  }
+}

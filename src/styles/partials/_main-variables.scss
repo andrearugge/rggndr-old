@@ -1,6 +1,5 @@
 /* Variables here - You can override variables too */
-$black: #03050e;
-$black-smooth: rgba($black, 0.5);
+$black: #000000;
 $white: #ffffff;
 
 $background: #efede8;
@@ -16,6 +15,8 @@ $grey-1: #f7f7f7;
 $grey-2: #f1f2f3;
 $grey-3: #eeeeef;
 $grey-4: #c8c8c9;
+
+$smooth: 0.4;
 
 $colors-map: (
   black: $black,
@@ -50,8 +51,8 @@ $radius-image: 16px;
 $input-placeholder-color: $grey-4;
 
 // Main + Sections
-$container-padding: 6%;
-$page-padding-top: 3rem;
+$container-padding: 3rem;
+$page-padding-top: 2rem;
 
 /* Utility variables */
 $safari-ios-toolbar: 34;
@@ -128,17 +129,17 @@ $responsive-space-multiplier-map: (
 
 // Typo
 $title-sizes: (
-  1: $font-size-base * 3.5,
-  2: $font-size-base * 2,
-  3: $font-size-base * 1.5,
-  4: $font-size-base * 1.25,
+  1: 120px,
+  2: 96px,
+  3: 56px,
+  4: 48px,
 );
 
 $title-spacing: (
-  1: $font-size-base * 1.65,
-  2: $font-size-base * 1.5,
-  3: $font-size-base * 1.25,
-  4: $font-size-base * 0.75,
+  1: 1.2,
+  2: 1.2,
+  3: 1.2,
+  4: 1.2,
 );
 
 $responsive-typo-multiplier-map: (
