@@ -43,3 +43,37 @@
     }
   }
 }
+
+.marquee-container {
+  overflow-x: hidden;
+  width: 100vw !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  position: relative;
+  div {
+    display: flex;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    min-width: 100%;
+    .marquee-text {
+      display: flex;
+      flex-shrink: 0;
+      align-items: center;
+      animation: slide-left 20s linear infinite;
+      @keyframes slide-left {
+        from {
+          -webkit-transform: translateX(0);
+          transform: translateX(0);
+        }
+        to {
+          -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+        }
+      }
+    }
+  }
+}
+
+.s-i-love {
+  padding-top: 0;
+}

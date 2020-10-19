@@ -1,9 +1,10 @@
 import React from "react"
+import { Link } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Header from "../components/header"
 import Divider from "../components/divider"
-import { Link } from "gatsby"
+import GetInTouch from "../components/GetInTouch"
 
 const IndexPage = () => (
   <Layout>
@@ -38,9 +39,9 @@ const IndexPage = () => (
     <div className="section section-container s-projects">
       <div>
         <div className="s-text">
-          rojects<sup>*</sup>
+          Projects<sup>*</sup>
         </div>
-        <div className="s-text smooth">
+        <div className="s-text smooth c-mt-1">
           <sup>*</sup>You might find some concept designs.
         </div>
       </div>
@@ -58,16 +59,40 @@ const IndexPage = () => (
 
     <Divider Color="white" />
 
-    <div className="section section-container s-do-dont">
-      <div className="text-center s-text c-mb-4">
+    <div className="section section-container s-i-dont">
+      <div className="text-center s-text c-mb-5">
         I do not
       </div>
-      <div className="title-4">
-        Elevate visuals with refined craftsmanship – Bring new and established brands to life
+      <div className="marquee-container marquee-1">
+        <div>
+          <div className="marquee-text title-4">
+            – Elevate visuals with refined craftsmanship – Bring new and established brands to life
+          </div>
+          <div className="marquee-text title-4 c-ml-3">
+            – Elevate visuals with refined craftsmanship – Bring new and established brands to life
+          </div>
+        </div>
+      </div>
+    </div>
+    <div className="section section-container s-i-love">
+      <div className="text-center s-text c-mb-5">
+        I love to
+      </div>
+      <div className="marquee-container marquee-2">
+        <div>
+          <div className="marquee-text title-4">
+            – Find new challenges – Grow thanks to every project – Work on concrete ideas  – Make beautiful things even if nobody cares
+          </div>
+          <div className="marquee-text title-4 c-ml-3">
+            – Find new challenges – Grow thanks to every project – Work on concrete ideas  – Make beautiful things even if nobody cares
+          </div>
+        </div>
       </div>
     </div>
 
     <Divider Color="white" />
+
+    <GetInTouch />
 
   </Layout>
 )
