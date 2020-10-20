@@ -28,6 +28,9 @@
     line-height: 0.7;
     margin-bottom: 10px;
     position: relative;
+    span:first-child {
+      color: $white;
+    }
     .sticker-laugh {
       width: 14vw;
       position: absolute !important;
