@@ -27,6 +27,14 @@
     text-transform: uppercase;
     line-height: 0.7;
     margin-bottom: 10px;
+    position: relative;
+    .sticker-laugh {
+      width: 14vw;
+      position: absolute !important;
+      top: 3vw;
+      right: -6vw;
+      transform: rotate(5deg);
+    }
   }
 
   .contact-info {
