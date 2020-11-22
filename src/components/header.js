@@ -15,7 +15,7 @@ const Header = () => (
         <img src="/svg/birthdate.svg" alt="Birthdate" />
         <div className="s-text">
           Thanks mom for bringing me<br />
-          to this wonderful world.
+          to this wonderful world
         </div>
       </div>
     </div>

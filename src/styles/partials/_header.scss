@@ -1,7 +1,13 @@
 .header {
   padding-top: $page-padding-top;
-  padding-left: $container-padding;
-  padding-right: $container-padding;
+  @include tablet {
+    padding-left: map-get($container-padding, mobile);
+    padding-right: map-get($container-padding, mobile);
+  }
+  @include desktop {
+    padding-left: map-get($container-padding, desktop);
+    padding-right: map-get($container-padding, desktop);
+  }
   @extend .d-flex;
 
   .logo {

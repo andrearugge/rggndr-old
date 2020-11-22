@@ -1,0 +1,57 @@
+.marqueeBanner {
+  text-transform: uppercase;
+  overflow-x: hidden;
+  color: $white;
+
+  div {
+    display: flex;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    min-width: 100%;
+    .marqueeBanner-inner {
+      display: flex;
+      flex-shrink: 0;
+      align-items: center;
+      p {
+        padding-left: 0.5rem;
+        margin: 0;
+        @extend .title-4;
+      }
+    }
+  }
+}
+
+@keyframes slide-left {
+  from {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  to {
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes slide-right {
+  from {
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+  to {
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+}
+
+.marqueeBanner {
+  &.banner-left {
+    .marqueeBanner-inner {
+      animation: slide-left 20s linear infinite;
+    }
+  }
+  &.banner-right {
+    .marqueeBanner-inner {
+      animation: slide-right 40s linear infinite;
+    }
+  }
+}

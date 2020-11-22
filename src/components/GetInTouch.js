@@ -12,7 +12,7 @@ export default () => (
       </div>
       <div className="col">
         <div className="s-text">
-          <span>Listening now &nbsp;</span><span>The xx</span>
+          <span>Listening now</span><span>&nbsp;The xx</span>
         </div>
       </div>
     </div>

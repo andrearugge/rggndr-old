@@ -24,7 +24,7 @@ export default function IndexPage() {
       <SEO title="Home" />
       <div className="section-container s-hero">
         <Header />
-        <div className="menu" data-scroll data-scroll-speed="3" data-scroll-position="top">
+        <div className="menu" data-scroll data-scroll-speed="1" data-scroll-position="top">
           <ul className="menu-items">
             <li>
               <Link to="/">[ About ]</Link>
@@ -75,33 +75,48 @@ export default function IndexPage() {
       <div className="section section-container s-i-dont">
         <div className="text-center s-text c-mb-5">
           I do not
-    </div>
-        <div className="marquee-container marquee-1">
+        </div>
+        <div class="marqueeBanner banner-left">
           <div>
-            <div className="marquee-text title-4">
-              – Elevate visuals with refined craftsmanship – Bring new and established brands to life
-        </div>
-            <div className="marquee-text title-4 c-ml-3">
-              – Elevate visuals with refined craftsmanship – Bring new and established brands to life
-        </div>
+            <div class="marqueeBanner-inner">
+              <p>– Elevate visuals with refined craftsmanship – Bring new and established brands to life</p>
+            </div>
+            <div class="marqueeBanner-inner">
+              <p>– Elevate visuals with refined craftsmanship – Bring new and established brands to life</p>
+            </div>
           </div>
         </div>
       </div>
       <div className="section section-container s-i-love">
         <div className="text-center s-text c-mb-5">
+        I love to
+        </div>
+        <div class="marqueeBanner banner-right">
+          <div>
+            <div class="marqueeBanner-inner">
+              <p>– Grow thanks to every project – Work on concrete ideas  – Make beautiful things even if nobody cares</p>
+            </div>
+            <div class="marqueeBanner-inner">
+              <p>– Grow thanks to every project – Work on concrete ideas  – Make beautiful things even if nobody cares</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* <div className="section section-container s-i-love">
+        <div className="text-center s-text c-mb-5">
           I love to
-    </div>
+        </div>
         <div className="marquee-container marquee-2">
           <div>
             <div className="marquee-text title-4">
               – Find new challenges – Grow thanks to every project – Work on concrete ideas  – Make beautiful things even if nobody cares
-        </div>
+            </div>
             <div className="marquee-text title-4 c-ml-3">
               – Find new challenges – Grow thanks to every project – Work on concrete ideas  – Make beautiful things even if nobody cares
-        </div>
+            </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       <Divider Color="white" />
 
