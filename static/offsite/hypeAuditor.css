@@ -1,0 +1,7 @@
+.initial__blur, .kyb-user-info--contacts-blur{
+  filter: blur(0) !important;
+}
+
+.initial__content, {
+  display: none !important;
+}
