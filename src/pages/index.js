@@ -9,17 +9,18 @@ import Divider from "../components/divider"
 import GetInTouch from "../components/GetInTouch"
 
 export default function IndexPage() {
-  const scrollRef = React.createRef();
+  // const scrollRef = React.createRef();
 
-  useEffect(() => {
-    const scroll = new locomotiveScroll({
-      el: scrollRef.current,
-      smooth: true
-    });
-  });
+  // useEffect(() => {
+  //   const scroll = new locomotiveScroll({
+  //     el: scrollRef.current,
+  //     smooth: true
+  //   });
+  // });
 
 
-  return <div className="scroll" ref={scrollRef}>
+  return <div>
+    {/* className="scroll" ref={scrollRef} */}
     <Layout>
       <SEO title="Home" />
       <div className="section-container s-hero">
