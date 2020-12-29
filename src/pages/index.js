@@ -31,10 +31,7 @@ export default function IndexPage() {
               <Link to="/">[ About ]</Link>
             </li>
             <li>
-              <Link to="/">[ Readings ]</Link>
-            </li>
-            <li>
-              <Link to="/">[ Feed ]</Link>
+              <Link to="/">[ Notes ]</Link>
             </li>
             <li>
               <Link to="/">[ Credits ]</Link>
@@ -43,9 +40,11 @@ export default function IndexPage() {
           <img src="/svg/barcode.svg" className="barcode" alt="Barcode" />
         </div>
         <div className="intro" data-scroll data-scroll-speed="1" data-scroll-position="top">
-          <span>( sweet intro )</span>
-      Hi, I'm Andrea. I'm based in Mantova, and I generally design SaaS products &amp; E-commerce. I also like help open-minded people start their digital adventure.
-    </div>
+          Hi, I'm Andrea.<br />
+          I'm a designer and I generally design Web products &amp; E-commerce.<br />
+          I Co-founded <a className="link" target="_blank" rel="noopener" href="https://kpi6.com/">KPI6</a> and <a className="link" rel="noopener" target="_blank" href="https://beconcept.studio/">Beconcept Studio</a>.<br />
+          I also like help open-minded people start their digital adventure.
+        </div>
       </div>
 
       <Divider Color="white" />
@@ -67,7 +66,7 @@ export default function IndexPage() {
           <div className="title-1">Dialetto libero</div>
         </div>
         <div className="text-center s-text c-mt-6">
-          <Link to="/">[ Wanna see more? ]</Link>
+          <a rel="noopener" target="_blank" href="https://dribbble.com/andrearugge/">[ Wanna se more? ]</a>
         </div>
       </div>
 
@@ -90,7 +89,7 @@ export default function IndexPage() {
       </div>
       <div className="section section-container s-i-love">
         <div className="text-center s-text c-mb-5">
-        I love to
+          I love to
         </div>
         <div class="marqueeBanner banner-right">
           <div>
