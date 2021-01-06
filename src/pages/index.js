@@ -105,7 +105,7 @@ export default function IndexPage() {
           </div>
         </div>
         <div className="projects">
-          <Link to="/" className="link">JBA</Link><span>,</span> <Link to="/" className="link">Seletti</Link><span>,</span> <Link to="/" className="link">Waylon</Link><span>,</span> <Link to="/" className="link">Acne Studios</Link><span>,</span> <Link to="/" className="link">Dialetto Libero</Link><span>,</span> <Link to="/" className="link">KPI6</Link><span>,</span> &amp; more<sup>*</sup>
+          <Link to="https://jbacollection.it/" target="_blank" rel="noopener" className="link">JBA</Link><span>,</span> <Link to="https://dribbble.com/shots/11445097-Slider-w-marquees" target="_blank" rel="noopener" className="link">Seletti</Link><span>,</span> <Link to="https://dribbble.com/shots/7784579-Waylon-Personal-E-commerce-assistant" target="_blank" rel="noopener" className="link">Waylon</Link><span>,</span> <Link to="https://dribbble.com/shots/6454433-Lens-Gallery" target="_blank" rel="noopener" className="link">Acne Studios</Link><span>,</span> <Link to="https://www.instagram.com/dialettolibero/" target="_blank" rel="noopener" className="link">Dialetto Libero</Link><span>,</span> <Link to="https://kpi6.com/" target="_blank" rel="noopener" className="link">KPI6</Link><span>,</span> &amp; more<sup>*</sup>
         </div>
       </div>
 
