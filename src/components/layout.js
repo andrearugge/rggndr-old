@@ -10,11 +10,11 @@ import PropTypes from "prop-types"
 
 import "../styles/main.scss"
 
-const Layout = ({ children }) => {
+const Layout = ({ children, color }) => {
 
   return (
     <div>
-      <main>{children}</main>
+      <main className={color}>{children}</main>
     </div>
   )
 }

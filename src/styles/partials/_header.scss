@@ -26,12 +26,16 @@
         a {
           font-size: 13px;
           text-transform: uppercase;
+          transition: all 0.3s ease-in;
           &.active {
+            @extend .smooth;
             &::before {
+              transition: all 0.3s ease-in;
               @extend .c-mr-1;
               content: "[";
             }
             &::after {
+              transition: all 0.3s ease-in;
               @extend .c-ml-1;
               content: "]";
             }

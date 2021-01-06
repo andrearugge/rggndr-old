@@ -25,8 +25,8 @@ export default function IndexPage() {
 
 
   return <div className="index scroll" ref={scrollRef}>
-    
-    <Layout>
+
+    <Layout color="black">
       <SEO title="Home" />
       <div className="section-container s-hero">
         <Header data-scroll data-scroll-speed="-1" data-scroll-position="top" />
@@ -53,7 +53,7 @@ export default function IndexPage() {
         </div>
       </div>
 
-      <Divider Color="white" data-scroll data-scroll-speed="1" data-scroll-position="top"/>
+      <Divider Color="white" data-scroll data-scroll-speed="1" data-scroll-position="top" />
 
       <div className="section section-container s-info">
         <div className="row">
@@ -68,8 +68,9 @@ export default function IndexPage() {
               <Link to="https://www.linkedin.com/in/andrerugge/" target="_blank" rel="noopener" className="link">LinkedIn</Link>
             </div>
           </div>
-          <div className="col-lg-3 offset-lg-1">
-            <Portrait / >
+          <div className="col-lg-3 offset-lg-1 info-portrait">
+            <Portrait />
+            {/* <button className="btn">Add some magic</button> */}
           </div>
           <div className="col-lg-4 offset-lg-1 info-2" data-scroll data-scroll-speed="1" data-scroll-position="top">
             <div className="s-text smooth c-mb-1">

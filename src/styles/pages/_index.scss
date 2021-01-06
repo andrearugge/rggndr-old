@@ -91,6 +91,23 @@
       text-align: right;
     }
   }
+
+  .info-portrait {
+    position: relative;
+    .btn {
+      position: absolute;
+      bottom: 1rem;
+      left: 2rem;
+      right: 2rem;
+      width: calc(100% - 4rem);
+      padding: 16px;
+      text-transform: uppercase;
+      color: $black;
+      background: $white;
+      border-radius: 8px;
+    }
+  }
+
   .info-2 {
     @include tablet {
       margin-top: map-get($space-map, 5);
