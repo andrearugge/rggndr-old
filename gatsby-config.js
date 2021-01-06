@@ -46,12 +46,16 @@ module.exports = {
     //   },
     // },
     {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      resolve: `gatsby-plugin-webfonts`,
       options: {
-        fonts: [{
-          family: `Inter`,
-          variants: [`200`, `300`, `400`, `600`]
-        }],
+        fonts: {
+          google: [
+            {
+              family: `Inter`,
+              variants: [`200`, `300`, `400`, `600`]
+            },
+          ],
+        },
       },
     },
     `gatsby-plugin-react-helmet`,
