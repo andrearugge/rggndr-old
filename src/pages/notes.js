@@ -1,5 +1,6 @@
 import React, { useEffect } from "react"
 import { Link } from "gatsby"
+import locomotiveScroll from "locomotive-scroll";
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -10,23 +11,23 @@ import GetInTouch from "../components/GetInTouch"
 
 
 export default function IndexPage() {
-  // const scrollRef = React.createRef();
+  const scrollRef = React.createRef();
 
-  // useEffect(() => {
-  //   const scroll = new locomotiveScroll({
-  //     el: scrollRef.current,
-  //     smooth: true
-  //   });
-  // });
+  useEffect(() => {
+    const scroll = new locomotiveScroll({
+      el: scrollRef.current,
+      smooth: true,
+      multiplier: .85
+    });
+  });
 
 
-  return <div className="notes">
-    {/* className="scroll" ref={scrollRef} */}
+  return <div className="notes scroll" ref={scrollRef}>
     <Layout>
       <SEO title="Notes" />
       <div className="section-container">
-        <Header />
-        <div className="heroSvg">
+        <Header data-scroll data-scroll-speed="-1" data-scroll-position="top" />
+        <div className="heroSvg" data-scroll data-scroll-speed="2" data-scroll-position="top">
           <SvgNotes />
         </div>
       </div>

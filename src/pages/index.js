@@ -13,26 +13,27 @@ import Portrait from "../components/img/portrait"
 
 
 export default function IndexPage() {
-  // const scrollRef = React.createRef();
+  const scrollRef = React.createRef();
 
-  // useEffect(() => {
-  //   const scroll = new locomotiveScroll({
-  //     el: scrollRef.current,
-  //     smooth: true
-  //   });
-  // });
+  useEffect(() => {
+    const scroll = new locomotiveScroll({
+      el: scrollRef.current,
+      smooth: true,
+      multiplier: .85
+    });
+  });
 
 
-  return <div className="index">
-    {/* className="scroll" ref={scrollRef} */}
+  return <div className="index scroll" ref={scrollRef}>
+    
     <Layout>
       <SEO title="Home" />
       <div className="section-container s-hero">
-        <Header />
-        <div className="heroSvg">
+        <Header data-scroll data-scroll-speed="-1" data-scroll-position="top" />
+        <div className="heroSvg" data-scroll data-scroll-speed="2" data-scroll-position="top">
           <SvgRggndr />
         </div>
-        <div className="menu" data-scroll data-scroll-speed="1" data-scroll-position="top">
+        <div className="menu">
           <img src="/svg/barcode.svg" className="barcode" alt="Barcode" />
         </div>
         <div className="row">
@@ -44,7 +45,7 @@ export default function IndexPage() {
               I also like help open-minded people start their digital adventure.
             </div>
           </div>
-          <div className="col-lg-4 scroll-down">
+          <div className="col-lg-4 scroll-down" data-scroll data-scroll-speed="1" data-scroll-position="top">
             <div className="icon">
               <ArrowDown />
             </div>
@@ -52,11 +53,11 @@ export default function IndexPage() {
         </div>
       </div>
 
-      <Divider Color="white" />
+      <Divider Color="white" data-scroll data-scroll-speed="1" data-scroll-position="top"/>
 
       <div className="section section-container s-info">
         <div className="row">
-          <div className="col-lg-3 info-1">
+          <div className="col-lg-3 info-1" data-scroll data-scroll-speed="1" data-scroll-position="top">
             <div className="s-text smooth c-mb-1">
               Social life
             </div>
@@ -68,9 +69,9 @@ export default function IndexPage() {
             </div>
           </div>
           <div className="col-lg-3 offset-lg-1">
-            <Portrait />
+            <Portrait / >
           </div>
-          <div className="col-lg-4 offset-lg-1 info-2">
+          <div className="col-lg-4 offset-lg-1 info-2" data-scroll data-scroll-speed="1" data-scroll-position="top">
             <div className="s-text smooth c-mb-1">
               Open infos
             </div>
