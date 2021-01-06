@@ -1,23 +1,20 @@
-import { Link } from "gatsby"
 import React from "react"
+import { Link } from "gatsby"
 
 const Header = () => (
   <div>
-    <div className="pre-header"></div>
     <div className="header">
-      <div className="logo">
-        <Link to="/">
-          <img src="/svg/logo-rgg.svg" alt="logo RGGNDR" />
-        </Link>
-      </div>
-
-      <div className="birthdate">
-        <img src="/svg/birthdate.svg" alt="Birthdate" />
-        <div className="s-text">
-          Thanks mom for bringing me<br />
-          to this wonderful world
-        </div>
-      </div>
+      <ul>
+        <li>
+          <Link to="/">Home</Link>
+        </li>
+        <li>
+          <Link to="about">About</Link>
+        </li>
+        <li>
+          <Link to="notes">Notes</Link>
+        </li>
+      </ul>
     </div>
   </div>
 )

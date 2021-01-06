@@ -1,36 +1,43 @@
 .header {
-  padding-top: $page-padding-top;
   @include tablet {
+    padding-top: $page-padding-top / 2;
     padding-left: map-get($container-padding, mobile);
     padding-right: map-get($container-padding, mobile);
   }
   @include desktop {
+    padding-top: $page-padding-top;
     padding-left: map-get($container-padding, desktop);
     padding-right: map-get($container-padding, desktop);
   }
   @extend .d-flex;
-
-  .logo {
-    flex-grow: 1;
-  }
-
-  .birthdate {
-    @extend .d-flex;
-    flex-direction: column;
-    align-items: flex-end;
-    img {
-      opacity: 0.4;
-    }
-    .s-text {
-      text-align: right;
-      margin-top: 0.25rem;
-    }
-  }
 }
 
 .section-container {
   .header {
     padding-left: 0;
     padding-right: 0;
+    ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      li {
+        a {
+          font-size: 13px;
+          text-transform: uppercase;
+          &.active {
+            &::before {
+              @extend .c-mr-1;
+              content: "[";
+            }
+            &::after {
+              @extend .c-ml-1;
+              content: "]";
+            }
+          }
+        }
+      }
+    }
   }
 }

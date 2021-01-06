@@ -7,6 +7,9 @@ import SEO from "../components/seo"
 import Header from "../components/header"
 import Divider from "../components/divider"
 import GetInTouch from "../components/GetInTouch"
+import SvgRggndr from "../components/svgRggndr"
+import Portrait from "../components/img/portrait"
+
 
 export default function IndexPage() {
   // const scrollRef = React.createRef();
@@ -25,98 +28,74 @@ export default function IndexPage() {
       <SEO title="Home" />
       <div className="section-container s-hero">
         <Header />
+        <div className="heroSvg">
+          <SvgRggndr />
+        </div>
         <div className="menu" data-scroll data-scroll-speed="1" data-scroll-position="top">
-          <ul className="menu-items">
-            <li>
-              <Link to="/">[ About ]</Link>
-            </li>
-            <li>
-              <Link to="/">[ Notes ]</Link>
-            </li>
-            <li>
-              <Link to="/">[ Credits ]</Link>
-            </li>
-          </ul>
           <img src="/svg/barcode.svg" className="barcode" alt="Barcode" />
         </div>
-        <div className="intro" data-scroll data-scroll-speed="1" data-scroll-position="top">
-          Hi, I'm Andrea.<br />
-          I'm a designer and I generally design Web products &amp; E-commerce.<br />
-          I Co-founded <a className="link" target="_blank" rel="noopener" href="https://kpi6.com/">KPI6</a> and <a className="link" rel="noopener" target="_blank" href="https://beconcept.studio/">Beconcept Studio</a>.<br />
+        <div className="intro s-text" data-scroll data-scroll-speed="1" data-scroll-position="top">
+          Hello world, I'm Andrea.<br />
+          I'm a designer and I generally craft Web products &amp; E-commerce.<br />
+          I Co-founded <Link to="https://kpi6.com/" target="_blank" rel="noopener" className="link">KPI6</Link> and <Link to="https://beconcept.studio/" target="_blank" rel="noopener" className="link">Beconcept Studio</Link>.<br />
           I also like help open-minded people start their digital adventure.
         </div>
       </div>
 
       <Divider Color="white" />
 
+      <div className="section section-container s-info">
+        <div className="row">
+          <div className="col-lg-3 info-1">
+            <div className="s-text smooth c-mb-1">
+              Social life
+            </div>
+            <div className="s-text">
+              <Link to="https://dribbble.com/andrearugge" target="_blank" rel="noopener" className="link">Dribbble</Link><br />
+              <Link to="https://www.instagram.com/andrearugge/" target="_blank" rel="noopener" className="link">Instagram</Link><br />
+              <Link to="https://twitter.com/andrea_rugge" target="_blank" rel="noopener" className="link">Twitter</Link><br />
+              <Link to="https://www.linkedin.com/in/andrerugge/" target="_blank" rel="noopener" className="link">LinkedIn</Link>
+            </div>
+          </div>
+          <div className="col-lg-3 offset-lg-1">
+            <Portrait />
+          </div>
+          <div className="col-lg-4 offset-lg-1 info-2">
+            <div className="s-text smooth c-mb-1">
+              Open infos
+            </div>
+            <div className="s-text">
+              Andrea Ruggeri, 28 years old, Italian.<br />
+              Grew up in the countryside with football and motorcycles.<br />
+              Engaged with <Link to="https://www.instagram.com/g.digiulia/" target="_blank" rel="noopener" className="link">Giulia</Link>.<br />
+              Can’t miss any F.C. Internazionale game.<br />
+              Crypto fun.
+            </div>
+
+            <div className="s-text smooth c-mb-1 c-mt-4">
+              Recently listening to
+            </div>
+            <div className="s-text">
+              Florence + The Machine<br />
+              The XX<br />
+              Pinguini Tattici Nucleari
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div className="section section-container s-projects">
-        <div>
+        <div className="section-head">
           <div className="s-text">
-            Projects<sup>*</sup>
+            Projects
           </div>
-          <div className="s-text smooth c-mt-1">
-            <sup>*</sup>You might find some concept designs.
-      </div>
-        </div>
-        <div className="c-mt-6">
-          <div className="title-1">Seletti</div>
-          <div className="title-1">Petty</div>
-          <div className="title-1">Waylon</div>
-          <div className="title-1">Acne Studios</div>
-          <div className="title-1">Dialetto libero</div>
-        </div>
-        <div className="text-center s-text c-mt-6">
-          <a rel="noopener" target="_blank" href="https://dribbble.com/andrearugge/">[ Wanna se more? ]</a>
-        </div>
-      </div>
-
-      <Divider Color="white" />
-
-      <div className="section section-container s-i-dont">
-        <div className="text-center s-text c-mb-5">
-          I do not
-        </div>
-        <div class="marqueeBanner banner-left">
-          <div>
-            <div class="marqueeBanner-inner">
-              <p>– Elevate visuals with refined craftsmanship – Bring new and established brands to life</p>
-            </div>
-            <div class="marqueeBanner-inner">
-              <p>– Elevate visuals with refined craftsmanship – Bring new and established brands to life</p>
-            </div>
+          <div className="s-text smooth">• You might find some concept designs.
           </div>
         </div>
-      </div>
-      <div className="section section-container s-i-love">
-        <div className="text-center s-text c-mb-5">
-          I love to
-        </div>
-        <div class="marqueeBanner banner-right">
-          <div>
-            <div class="marqueeBanner-inner">
-              <p>– Grow thanks to every project – Work on concrete ideas  – Make beautiful things even if nobody cares</p>
-            </div>
-            <div class="marqueeBanner-inner">
-              <p>– Grow thanks to every project – Work on concrete ideas  – Make beautiful things even if nobody cares</p>
-            </div>
-          </div>
+        <div className="projects">
+          <Link to="/" className="link">JBA</Link><span>,</span> <Link to="/" className="link">Seletti</Link><span>,</span> <Link to="/" className="link">Waylon</Link><span>,</span> <Link to="/" className="link">Acne Studios</Link><span>,</span> <Link to="/" className="link">Dialetto Libero</Link><span>,</span> <Link to="/" className="link">KPI6</Link><span>,</span> &amp; more<sup>*</sup>
         </div>
       </div>
-      {/* <div className="section section-container s-i-love">
-        <div className="text-center s-text c-mb-5">
-          I love to
-        </div>
-        <div className="marquee-container marquee-2">
-          <div>
-            <div className="marquee-text title-4">
-              – Find new challenges – Grow thanks to every project – Work on concrete ideas  – Make beautiful things even if nobody cares
-            </div>
-            <div className="marquee-text title-4 c-ml-3">
-              – Find new challenges – Grow thanks to every project – Work on concrete ideas  – Make beautiful things even if nobody cares
-            </div>
-          </div>
-        </div>
-      </div> */}
 
       <Divider Color="white" />
 
@@ -126,9 +105,3 @@ export default function IndexPage() {
   </div>
 
 }
-
-// const IndexPage = () => (
-
-// )
-
-// export default IndexPage

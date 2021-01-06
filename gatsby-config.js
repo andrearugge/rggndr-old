@@ -34,6 +34,26 @@ module.exports = {
         cookieDomain: "",
       },
     },
+    // {
+    //   resolve: `gatsby-source-spotify`,
+    //   options: {
+    //     clientId: `d59a9c6e618843c88383189947b497d6`,
+    //     clientSecret: `62e17dba660848d399889fd968017d39`,
+    //     refreshToken: `AQDxhbh39BI31enIaV0cGLYG80WI-8qD8VsQQCINIp2elqtipQIJmcwGxTd5UAjxgElTd-WRbQUjfLBehDb13Es0-MG7MWjV7sv0_Jvynix7_tdgWNP9iCyEwqFb0cDAhuU`,
+    //     fetchPlaylists: true,
+    //     fetchRecent: true,
+    //     timeRanges: ['short_term', 'medium_term', 'long_term'],
+    //   },
+    // },
+    {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [{
+          family: `Inter`,
+          variants: [`200`, `300`, `400`, `600`]
+        }],
+      },
+    },
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,

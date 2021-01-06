@@ -3,40 +3,10 @@
 @include selection;
 
 @font-face {
-  font-family: 'Hatton';
-  src: url('/fonts/Hatton-Light.woff2') format('woff2'),
-      url('/fonts/Hatton-Light.woff') format('woff'),
-      url('/fonts/Hatton-Light.ttf') format('truetype');
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Hatton';
-  src: url('/fonts/Hatton-Ultralight.woff2') format('woff2'),
-      url('/fonts/Hatton-Ultralight.woff') format('woff'),
-      url('/fonts/Hatton-Ultralight.ttf') format('truetype');
-  font-weight: 200;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
   font-family: 'Beastly 18 Point';
   src: url('/fonts/Beastly-18Point.woff2') format('woff2'),
       url('/fonts/Beastly-18Point.woff') format('woff'),
       url('/fonts/Beastly-18Point.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Maison Neue';
-  src: url('/fonts/MaisonNeue-Book.woff2') format('woff2'),
-      url('/fonts/MaisonNeue-Book.woff') format('woff'),
-      url('/fonts/MaisonNeue-Book.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
