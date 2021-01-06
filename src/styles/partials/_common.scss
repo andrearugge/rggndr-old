@@ -5,7 +5,7 @@ body {
   overflow-x: hidden;
   font-family: "Inter", -apple-system, sans-serif;
   font-weight: 300;
-  font-size: 15px;
+  font-size: 14px;
 }
 
 p {
@@ -187,4 +187,25 @@ FOOTER
 
 .w-100 {
   width: 100%;
+}
+
+/* ==========
+HERO SVG
+========== */
+.heroSvg {
+  display: flex;
+  justify-content: center;
+  @include desktop {
+    height: 240px;
+    margin-top: map-get($space-map, 3);
+  }
+  @include tablet {
+    height: 8vh;
+  }
+  svg {
+    height: 100%;
+  }
+  path {
+    fill: $white;
+  }
 }

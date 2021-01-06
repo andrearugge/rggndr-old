@@ -8,6 +8,7 @@ import Header from "../components/header"
 import Divider from "../components/divider"
 import GetInTouch from "../components/GetInTouch"
 import SvgRggndr from "../components/svgRggndr"
+import ArrowDown from "../components/arrowDown"
 import Portrait from "../components/img/portrait"
 
 
@@ -22,7 +23,7 @@ export default function IndexPage() {
   // });
 
 
-  return <div>
+  return <div className="index">
     {/* className="scroll" ref={scrollRef} */}
     <Layout>
       <SEO title="Home" />
@@ -34,11 +35,20 @@ export default function IndexPage() {
         <div className="menu" data-scroll data-scroll-speed="1" data-scroll-position="top">
           <img src="/svg/barcode.svg" className="barcode" alt="Barcode" />
         </div>
-        <div className="intro s-text" data-scroll data-scroll-speed="1" data-scroll-position="top">
-          Hello world, I'm Andrea.<br />
-          I'm a designer and I generally craft Web products &amp; E-commerce.<br />
-          I Co-founded <Link to="https://kpi6.com/" target="_blank" rel="noopener" className="link">KPI6</Link> and <Link to="https://beconcept.studio/" target="_blank" rel="noopener" className="link">Beconcept Studio</Link>.<br />
-          I also like help open-minded people start their digital adventure.
+        <div className="row">
+          <div className="col-lg-8">
+            <div className="intro s-text" data-scroll data-scroll-speed="1" data-scroll-position="top">
+              Hello world, I'm Andrea.<br />
+              I'm a designer and I generally craft Web products &amp; E-commerce.<br />
+              I Co-founded <Link to="https://kpi6.com/" target="_blank" rel="noopener" className="link">KPI6</Link> and <Link to="https://beconcept.studio/" target="_blank" rel="noopener" className="link">Beconcept Studio</Link>.<br />
+              I also like help open-minded people start their digital adventure.
+            </div>
+          </div>
+          <div className="col-lg-4 scroll-down">
+            <div className="icon">
+              <ArrowDown />
+            </div>
+          </div>
         </div>
       </div>
 

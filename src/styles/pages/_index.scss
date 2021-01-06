@@ -4,24 +4,6 @@
   min-height: 100vh;
   padding-bottom: $page-padding-top;
 
-  .heroSvg {
-    display: flex;
-    justify-content: center;
-    @include desktop {
-      height: 240px;
-      margin-top: map-get($space-map, 3);
-    }
-    @include tablet {
-      height: 8vh;
-    }
-    svg {
-      height: 100%;
-    }
-    path {
-      fill: $white;
-    }
-  }
-
   .menu {
     flex: 1;
     @extend .d-flex;
@@ -29,21 +11,44 @@
     align-items: center;
     justify-content: center;
 
-    .menu-items {
-      padding: 0;
-      list-style: none;
-      margin: 0;
-      li {
-        display: inline-block;
-        a {
-          @extend .s-text;
-          @extend .c-mx-1;
-        }
-      }
-    }
-
     .barcode {
       @extend .c-mt-2;
+    }
+  }
+
+  .intro {
+    @include tablet {
+      text-align: center;
+    }
+  }
+
+  .scroll-down {
+    display: flex;
+    justify-content: flex-end;
+    @include tablet {
+      margin-top: map-get($space-map, 5);
+      justify-content: center;
+    }
+    .icon {
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      transition: all 0.3s ease-in;
+      background: rgba($white, 0.1);
+      &:hover {
+        background: rgba($white, 0.2);
+      }
+      transform: rotate(90deg);
+      svg {
+        height: 20px;
+        path {
+          fill: $white;
+        }
+      }
     }
   }
 }
