@@ -66,12 +66,22 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `RGGNDR`,
+        short_name: `RGGNDR`,
+        start_url: `/`,
+        background_color: `#0D0F13`,
+        icon: `src/images/pwa.png`,
+        theme_color: `#FDF6EA`,
+        display: `standalone`,
+      },
+    },
     `gatsby-plugin-typescript`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-sharp`,
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    `gatsby-plugin-offline`,
   ],
 }
