@@ -46,17 +46,17 @@ export default function IndexPage() {
               I also like help open-minded people start their digital adventure.
             </div>
           </div>
-          <div className="col-lg-4 scroll-down" data-scroll data-scroll-speed="1" data-scroll-position="top">
+          <a className="col-lg-4 scroll-down" data-scroll data-scroll-speed="1" data-scroll-position="top" href="#s-info">
             <div className="icon">
               <ArrowDown />
             </div>
-          </div>
+          </a>
         </div>
       </div>
 
       <Divider Color="white" data-scroll data-scroll-speed="1" data-scroll-position="top" />
 
-      <div className="section section-container s-info">
+      <div className="section section-container s-info" id="s-info">
         <div className="row">
           <div className="col-lg-3 info-1" data-scroll data-scroll-speed="1" data-scroll-position="top">
             <div className="s-text smooth c-mb-1">
@@ -92,6 +92,15 @@ export default function IndexPage() {
               Florence + The Machine<br />
               The XX<br />
               Pinguini Tattici Nucleari
+            </div>
+
+            <div className="s-text smooth c-mb-1 c-mt-4">
+              Favourite books
+            </div>
+            <div className="s-text">
+              Factfullness<br />
+              The Millenium Saga<br />
+              Norwegian wood
             </div>
           </div>
         </div>
