@@ -16,15 +16,16 @@ export default function IndexPage() {
   const scrollRef = React.createRef();
 
   useEffect(() => {
-    const scroll = new locomotiveScroll({
-      el: scrollRef.current,
-      smooth: true,
-      multiplier: .85
-    });
+    // const scroll = new locomotiveScroll({
+    //   el: scrollRef.current,
+    //   smooth: true,
+    //   multiplier: .85
+    // });
   });
 
 
-  return <div className="index scroll" ref={scrollRef}>
+  // ref={scrollRef}
+  return <div className="index">
 
     <Layout color="black">
       <SEO title="Home" />

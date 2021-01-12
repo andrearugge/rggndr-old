@@ -14,15 +14,15 @@ export default function IndexPage() {
   const scrollRef = React.createRef();
 
   useEffect(() => {
-    const scroll = new locomotiveScroll({
-      el: scrollRef.current,
-      smooth: true,
-      multiplier: .85
-    });
+    // const scroll = new locomotiveScroll({
+    //   el: scrollRef.current,
+    //   smooth: true,
+    //   multiplier: .85
+    // });
   });
 
 
-  return <div className="notes scroll" ref={scrollRef}>
+  return <div className="notes">
     <Layout>
       <SEO title="Notes" />
       <div className="section-container">

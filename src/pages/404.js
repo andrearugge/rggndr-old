@@ -7,7 +7,7 @@ import SEO from "../components/seo"
 const NotFoundPage = () => (
   <Layout>
     <SEO title="404 | Not found" />
-    {/* IMAGE */}
+    CIAONE
   </Layout>
 )
 
