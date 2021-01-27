@@ -16,11 +16,11 @@ export default function IndexPage() {
   const scrollRef = React.createRef();
 
   useEffect(() => {
-    // const scroll = new locomotiveScroll({
-    //   el: scrollRef.current,
-    //   smooth: true,
-    //   multiplier: .85
-    // });
+    const scroll = new locomotiveScroll({
+      el: scrollRef.current,
+      smooth: true,
+      multiplier: .85
+    });
   });
 
 
